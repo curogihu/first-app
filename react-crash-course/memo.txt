@@ -1,0 +1,5 @@
+npm create vite
+cd .\react-crash-course\
+npm install
+npm run dev
+------------------------------
