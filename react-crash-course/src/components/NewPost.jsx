@@ -1,18 +1,9 @@
-import { useState } from 'react';
 import classes from './NewPost.module.css';
 
 function NewPost() {
-  // const stateData = useState('');
-  // stateData[0] // current value
-  // stateData[1] // state updaing function
-  //
-
   const [ enteredBody, setEnteredBody ] = useState(''); 
-  // let enteredBody = '';
-
+ 
   function changeBodyHandler (event) {
-    // console.log(event.target.value);
-    // enteredBody = event.target.value;
     setEnteredBody(event.target.value);
   }
 
