@@ -6,11 +6,7 @@ import Modal from './Modal';
 import classes from './PostsList.module.css';
 
 function PostsList() {
-<<<<<<< HEAD
     const [modalIsVisible, setModalIsVisible] = useState(true);
-=======
-    const {modalIsVisible, setModalIsVisible } = useState(true);
->>>>>>> a4e7b324b69f78395050f21e09bc203c7b3bd240
     const [enteredBody, setEnteredBody] = useState('');
     const [enteredAuthor, setEnteredAuthor] = useState('');
 
