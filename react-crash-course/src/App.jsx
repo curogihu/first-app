@@ -1,5 +1,4 @@
 import PostsList from "./components/PostsList";
-import Post from "./components/Post";
 
 function App() {
   return (
