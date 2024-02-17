@@ -3,3 +3,4 @@ cd .\react-crash-course\
 npm install
 npm run dev
 ------------------------------
+npm install react-icons
