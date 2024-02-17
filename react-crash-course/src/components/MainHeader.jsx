@@ -18,3 +18,5 @@ function MainHeader({ onCreatePost }) {
     </header>
   );
 }
+
+export default MainHeader;
