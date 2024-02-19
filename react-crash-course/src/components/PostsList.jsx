@@ -6,12 +6,21 @@ import Modal from './Modal';
 import classes from './PostsList.module.css';
 
 function PostsList({isPosting, onStopPosting}) {
+    const [posts, setPosts] = useState([]);
+
+    function addPostHandler(postData) {
+        // setPosts([postData, ...posts]);
+        setPosts((existingPosts) => {
+            return [postData, ...existingPosts];
+        })
+    }
+
     return (
         <>
             {isPosting && (
                 <Modal onClose={onStopPosting}>
                     <NewPost 
-                        onCancel={onStopPosting}
+                        onCancel={onStopPosting} onAddPost={addPostHandler}
                     />
                 </Modal>
             )}

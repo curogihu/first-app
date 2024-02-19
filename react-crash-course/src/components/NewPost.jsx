@@ -20,7 +20,8 @@ function NewPost({onCancel}) {
       body: enteredBody,
       author: enteredAuthor
     };
-    console.log(postData);
+    // console.log(postData);
+    onAddPost(postData);
     onCancel();
   }
 
