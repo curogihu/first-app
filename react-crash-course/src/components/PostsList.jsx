@@ -9,10 +9,7 @@ function PostsList({isPosting, onStopPosting}) {
     const [posts, setPosts] = useState([]);
 
     function addPostHandler(postData) {
-        // setPosts([postData, ...posts]);
-        setPosts((existingPosts) => {
-            return [postData, ...existingPosts];
-        })
+        setPosts((existingPosts) => [postData, ...existingPosts]);
     }
 
     return (
@@ -20,13 +17,13 @@ function PostsList({isPosting, onStopPosting}) {
             {isPosting && (
                 <Modal onClose={onStopPosting}>
                     <NewPost 
-                        onCancel={onStopPosting} onAddPost={addPostHandler}
+                        onCancel={onStopPosting}  onAddPost={addPostHandler}
                     />
                 </Modal>
             )}
 
             <ul className={ classes.posts }>
-                <Post author="Manuel" body="Check out the full course!" />
+                {posts.map((post) => <Post author={post.author} body={post.body} />)}
             </ul>
         </>
     );
